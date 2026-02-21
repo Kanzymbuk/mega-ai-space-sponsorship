@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mega AI Space Sponsorship</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+      },
+      colors: {
+        slate: {
+          850: '#1e293b',
+          950: '#0f172a',
+        }
+      },
+      keyframes: {
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        pulseGlow: {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.3)' },
+          '50%': { boxShadow: '0 0 35px rgba(14, 165, 233, 0.6)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-6px)' },
+        }
+      },
+      animation: {
+        fadeUp: 'fadeUp 0.6s ease-out forwards',
+        shimmer: 'shimmer 3s linear infinite',
+        pulseGlow: 'pulseGlow 2.5s ease-in-out infinite',
+        float: 'float 3s ease-in-out infinite',
+      }
+    }
+  }
+}
+</script>
+<style>
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+  .stagger-7 { animation-delay: 0.7s; }
+  .stagger-8 { animation-delay: 0.8s; }
+
+  .shimmer-bg {
+    background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.08) 50%, transparent 100%);
+    background-size: 200% 100%;
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.4), rgba(139, 92, 246, 0.2), rgba(14, 165, 233, 0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .list-item-hover {
+    transition: all 0.2s ease;
+  }
+  .list-item-hover:hover {
+    transform: translateX(6px);
+    color: #f1f5f9;
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: rgba(56, 189, 248, 0.3);
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body class="bg-slate-950 text-slate-200 flex justify-center p-5 min-h-screen relative overflow-x-hidden">
+
+  <div id="particles" class="fixed inset-0 pointer-events-none z-0" aria-hidden="true"></div>
+
+  <div class="max-w-3xl w-full relative z-10">
+
+    <div class="opacity-0 animate-fadeUp stagger-1 gradient-border card-hover bg-slate-850 rounded-2xl p-6 sm:p-8 mb-6 shadow-xl shadow-black/30">
+
+      <div class="flex items-start gap-3 mb-3">
+        <span class="text-3xl animate-float" aria-hidden="true">🚀</span>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-white leading-tight">Mega AI Space — Featured Sponsorship</h1>
+          <p class="text-sm text-slate-400 mt-1 flex items-center gap-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+            Wednesday &bull; 6PM UTC &bull; AI / DePIN Focus
+          </p>
+        </div>
+      </div>
+
+      <div class="shimmer-bg animate-shimmer rounded-xl p-4 mt-4 mb-6">
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          After <span class="text-sky-400 font-semibold">21 successful episodes</span>, we're hosting our biggest AI Space yet. One premium <span class="text-white font-semibold">$500 featured slot</span> available.
+        </p>
+      </div>
+
+      <div class="mb-6">
+        <h2 class="font-semibold text-sky-400 mb-3 flex items-center gap-2 text-base">
+          <span aria-hidden="true">🔥</span> What You Get
+        </h2>
+        <ul class="space-y-2">
+          <li class="opacity-0 animate-fadeUp stagger-2 list-item-hover flex items-start gap-3 text-sm sm:text-base text-slate-300 py-1.5 px-3 rounded-lg hover:bg-white/[0.03]">
+            <span class="text-sky-400 mt-0.5 shrink-0">&#9670;</span>
+            <span>10–15 minute dedicated speaking segment</span>
+          </li>
+          <li class="opacity-0 animate-fadeUp stagger-3 list-item-hover flex items-start gap-3 text-sm sm:text-base text-slate-300 py-1.5 px-3 rounded-lg hover:bg-white/[0.03]">
+            <span class="text-sky-400 mt-0.5 shrink-0">&#9670;</span>
+            <span>Featured partner positioning</span>
+          </li>
+          <li class="opacity-0 animate-fadeUp stagger-3 list-item-hover flex items-start gap-3 text-sm sm:text-base text-slate-300 py-1.5 px-3 rounded-lg hover:bg-white/[0.03]">
+            <span class="text-sky-400 mt-0.5 shrink-0">&#9670;</span>
+            <span>4 structured KOL speakers (10 mins each)</span>
+          </li>
+          <li class="opacity-0 animate-fadeUp stagger-4 list-item-hover flex items-start gap-3 text-sm sm:text-base text-slate-300 py-1.5 px-3 rounded-lg hover:bg-white/[0.03]">
+            <span class="text-sky-400 mt-0.5 shrink-0">&#9670;</span>
+            <span>Coordinated pre-Space promotion</span>
+          </li>
+          <li class="opacity-0 animate-fadeUp stagger-4 list-item-hover flex items-start gap-3 text-sm sm:text-base text-slate-300 py-1.5 px-3 rounded-lg hover:bg-white/[0.03]">
+            <span class="text-sky-400 mt-0.5 shrink-0">&#9670;</span>
+            <span><span class="text-emerald-400 font-medium">$200</span> live engagement giveaway</span>
+          </li>
+          <li class="opacity-0 animate-fadeUp stagger-5 list-item-hover flex items-start gap-3 text-sm sm:text-base text-slate-300 py-1.5 px-3 rounded-lg hover:bg-white/[0.03]">
+            <span class="text-sky-400 mt-0.5 shrink-0">&#9670;</span>
+            <span>Professionally clipped highlights</span>
+          </li>
+          <li class="opacity-0 animate-fadeUp stagger-5 list-item-hover flex items-start gap-3 text-sm sm:text-base text-slate-300 py-1.5 px-3 rounded-lg hover:bg-white/[0.03]">
+            <span class="text-sky-400 mt-0.5 shrink-0">&#9670;</span>
+            <span>Post-Space recap thread</span>
+          </li>
+          <li class="opacity-0 animate-fadeUp stagger-6 list-item-hover flex items-start gap-3 text-sm sm:text-base text-slate-300 py-1.5 px-3 rounded-lg hover:bg-white/[0.03]">
+            <span class="text-sky-400 mt-0.5 shrink-0">&#9670;</span>
+            <span>Secondary promotional push (24–48 hrs)</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h2 class="font-semibold text-sky-400 mb-3 flex items-center gap-2 text-base">
+          <span aria-hidden="true">🎯</span> Campaign Alignment
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="opacity-0 animate-fadeUp stagger-5 bg-white/[0.04] border border-white/[0.06] rounded-xl p-3 text-center text-sm text-slate-300 hover:border-sky-400/30 hover:bg-sky-400/[0.05] transition-all duration-200 cursor-default">
+            <div class="text-lg mb-1" aria-hidden="true">👁️</div>
+            Visibility
+          </div>
+          <div class="opacity-0 animate-fadeUp stagger-6 bg-white/[0.04] border border-white/[0.06] rounded-xl p-3 text-center text-sm text-slate-300 hover:border-sky-400/30 hover:bg-sky-400/[0.05] transition-all duration-200 cursor-default">
+            <div class="text-lg mb-1" aria-hidden="true">⚡</div>
+            Bounty Activation
+          </div>
+          <div class="opacity-0 animate-fadeUp stagger-7 bg-white/[0.04] border border-white/[0.06] rounded-xl p-3 text-center text-sm text-slate-300 hover:border-sky-400/30 hover:bg-sky-400/[0.05] transition-all duration-200 cursor-default">
+            <div class="text-lg mb-1" aria-hidden="true">🪂</div>
+            Airdrop Awareness
+          </div>
+          <div class="opacity-0 animate-fadeUp stagger-8 bg-white/[0.04] border border-white/[0.06] rounded-xl p-3 text-center text-sm text-slate-300 hover:border-sky-400/30 hover:bg-sky-400/[0.05] transition-all duration-200 cursor-default">
+            <div class="text-lg mb-1" aria-hidden="true">🏛️</div>
+            Narrative Positioning
+          </div>
+        </div>
+      </div>
+
+      <div class="animate-pulseGlow inline-block rounded-xl">
+        <div class="bg-gradient-to-r from-sky-500 to-sky-400 text-slate-950 px-5 py-3 rounded-xl font-bold text-base sm:text-lg shadow-lg shadow-sky-500/20">
+          $500 Featured Sponsorship Package
+        </div>
+      </div>
+    </div>
+
+    <div class="opacity-0 animate-fadeUp stagger-6 gradient-border card-hover bg-slate-850 rounded-2xl p-6 sm:p-8 mb-6 shadow-xl shadow-black/30">
+      <div class="flex items-start gap-3 mb-4">
+        <span class="text-2xl" aria-hidden="true">📢</span>
+        <h2 class="text-xl sm:text-2xl font-bold text-white">Strategic Execution</h2>
+      </div>
+
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-5">
+        We activate previous Space attendees and communities for amplified reach. The goal is simple:
+      </p>
+
+      <div class="bg-gradient-to-r from-sky-500/10 via-violet-500/10 to-sky-500/10 border border-white/[0.06] rounded-xl p-5 text-center mb-5">
+        <p class="text-xl sm:text-2xl font-bold text-white tracking-wide">
+          Loud<span class="text-sky-400 mx-2">·</span>Coordinated<span class="text-sky-400 mx-2">·</span>Impactful
+        </p>
+      </div>
+
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        This isn't just exposure. It's <span class="text-white font-semibold">narrative control</span> and <span class="text-white font-semibold">measurable engagement</span>.
+      </p>
+    </div>
+
+    <div class="opacity-0 animate-fadeUp stagger-8 text-center py-6">
+      <p class="text-slate-500 text-sm mb-4">DM to secure the slot and begin planning.</p>
+      <div class="flex items-center justify-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
+        <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span>
+        <span class="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    (function() {
+      var container = document.getElementById('particles');
+      if (!container || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      for (var i = 0; i < 20; i++) {
+        var p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.top = Math.random() * 100 + '%';
+        p.style.opacity = (Math.random() * 0.4 + 0.1).toString();
+        p.style.width = p.style.height = (Math.random() * 3 + 1) + 'px';
+        p.style.animation = 'float ' + (Math.random() * 4 + 3) + 's ease-in-out infinite';
+        p.style.animationDelay = (Math.random() * 5) + 's';
+        container.appendChild(p);
+      }
+    })();
+  </script>
+
+</body>
+</html>
